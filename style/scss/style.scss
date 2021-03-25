@@ -1,11 +1,135 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
 
+$greenMint : #46FFC8;
+$black: #2A2A2A;
+$darkGrey: #707070;
+$lightGrey: #E9E9E9;
+$veryLightGrey: #EEEFEF;
+
 html, body {
   margin:0;
   padding:0;
-  color: $black;
+  color: black;
   width:100%;
   height: 100%;
   font-size: 12px;
   font-family:roboto;
+}
+
+header {
+  height: 100px;
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  display: inline-flex;
+  img {
+    max-height: 80px;
+  }
+  .logo {
+    place-self:center;
+  }
+  #barre{
+    height:50px;
+    width: 50px;
+    place-self:center;
+  }
+  h1 {
+    align-self: center;
+    font-size: 30px;
+    font-weight: lighter;
+  }
+  @media (max-width: 768px){
+     margin-top: 0;
+     img {
+       height:50px;
+     }
+     #barre{
+       height:30px;
+       width: 30px;
+       place-self:auto;
+       margin-top: 10px;
+     }
+     h1 {
+       font-size: 18px;
+       align-self: baseline;
+     }
+   }
+}
+
+#container {
+    position: relative;
+    text-align: center;
+    margin : auto;
+    height: initial;
+    width: 70%;
+  #fdp {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    img {
+      width:100%;
+      height:auto;
+      display: none;
+      @media (min-width: 738px){
+         display: block;
+       }
+    }
+
+  }
+  #text_container {
+    background-color: #fff;
+    position: absolute;
+    margin: 0 auto;
+    z-index: 3;
+    padding : 3em;
+   @media screen and (min-width: 768px) and (max-width: 1100px){
+      margin: 1em;
+      padding : 0.75em;
+      margin-left: 40%;
+    }
+    @media screen and (min-width: 1100px) and (max-width: 1500px){
+       margin: 3em;
+       margin-left: 50%;
+     }
+     @media (min-width: 1500px){
+        margin-top: 11em;
+        margin-right: 5em;
+        margin-left: 60%;
+      }
+    h2 {
+      font-size:25px;
+    }
+    p {
+      font-size: 16px;
+      a {
+        color: $darkGrey;
+        &:hover {
+          color: $greenMint;
+        }
+      }
+    }
+    button {
+      cursor: pointer;
+      border: none;
+      background-color: $black;
+      color:#fff;
+      min-height: 40px;
+      padding: 1em;
+      a {
+        color: #fff;
+        text-decoration: none;
+      }
+      p {
+        margin:0;
+      }
+      &:hover {
+        background-color: $greenMint;
+      }
+    }
+  }
 }
